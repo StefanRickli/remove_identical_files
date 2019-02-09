@@ -4,8 +4,9 @@ This Python3 script removes any file from SOURCE if it matches the relative path
 ## Syntax
 `python remove_identical_files.py SOURCE TARGET [-r]`
 
-1) Scans folder `SOURCE` and creates a hashlist of the contained files together with their relative paths
-2) Scans folder `TARGET` and compares the files' hash/relpath with the dict built in step 1
+The script performs these steps:
+1) Scan folder `SOURCE` and create a hashlist of the contained files together with their relative paths
+2) Scan folder `TARGET` and compare the files' hash/relpath with the dict built in step 1
 3) Files whose hash/relpath matches are listed
 4) User can choose to delete these files in `SOURCE`
 

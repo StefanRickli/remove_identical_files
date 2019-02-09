@@ -73,12 +73,13 @@ def remove_identical_files(path_from, path_to, other_args = None, hash=hashlib.s
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        print('usage: python remove_identical_files.py FROM TO [-r]')
+        print('usage: python remove_identical_files.py SOURCE TARGET [-r]')
         print()
-        print('1) Scans folder FROM and creates a hashlist of the contained files together with their relative paths')
-        print("2) Scans folder TO and compares the files' hash/relpath with the dict built in step 1.")
+        print('The script performs these steps:')
+        print('1) Scan folder TARGET and create a hashlist of the contained files together with their relative paths')
+        print("2) Scan folder SOURCE and compare the files' hash/relpath with the dict built in step 1.")
         print('3) Files whose hash/relpath matches are listed')
-        print('4) User can choose to delete these files in FROM')
+        print('4) User can choose to delete these files in SOURCE')
         print()
         print('-r: perform action recursively on the folders')
     if len(sys.argv) == 3:
