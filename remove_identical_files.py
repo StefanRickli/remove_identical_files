@@ -56,10 +56,12 @@ def remove_identical_files(path_from, path_to, other_args = None, hash=hashlib.s
         file_id = (hashobj.digest(), os.path.getsize(filepath), os.path.relpath(filepath, path_from))
         duplicate = hashes.get(file_id, None)
         if duplicate:
-            print('"{}" already here: "{}"'.format(filepath, duplicate))
+            print('"{}"'.format(filepath))
+            print('<==> "{}"'.format(duplicate))            
             files_to_delete.append(filepath)
 
     print()
+    print('Summary:')
     for f in files_to_delete:
         print(f)
 
